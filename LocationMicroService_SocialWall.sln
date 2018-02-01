@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationMicroService_SocialWall", "LocationMicroService_SocialWall\LocationMicroService_SocialWall.csproj", "{12AA0E50-FEF5-4BDE-8304-FF40B65CF6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationMicroService_SocialWall.Tests", "LocationMicroService_SocialWall.Tests\LocationMicroService_SocialWall.Tests.csproj", "{D467CD55-E247-4885-8698-55DFD36C772A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12AA0E50-FEF5-4BDE-8304-FF40B65CF6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12AA0E50-FEF5-4BDE-8304-FF40B65CF6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12AA0E50-FEF5-4BDE-8304-FF40B65CF6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12AA0E50-FEF5-4BDE-8304-FF40B65CF6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D467CD55-E247-4885-8698-55DFD36C772A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D467CD55-E247-4885-8698-55DFD36C772A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D467CD55-E247-4885-8698-55DFD36C772A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D467CD55-E247-4885-8698-55DFD36C772A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6172459-B7AB-4286-A200-7B8079D38484}
+	EndGlobalSection
+EndGlobal

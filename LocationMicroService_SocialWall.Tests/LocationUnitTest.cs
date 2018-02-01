@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LocationMicroService_SocialWall.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class LocationUnitTest
     {
         [TestMethod]
         public void TestMethod1()

@@ -15,7 +15,7 @@ namespace LocationMicroService_SocialWall.Controllers
         [Route("Location"), HttpGet]
         public IEnumerable<Location> GetAllLocations([FromUri] ActiveStatusEnum active = ActiveStatusEnum.Active)
         {
-            return LocationDB.GetAllLocations(active);
+            return LocationDB.GetLocations(active);
         }
 
         [Route("Location/{id}"), HttpGet]

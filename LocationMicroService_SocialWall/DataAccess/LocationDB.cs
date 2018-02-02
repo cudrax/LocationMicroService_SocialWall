@@ -48,12 +48,12 @@ namespace LocationMicroService_SocialWall.DataAccess
         private static void FillData(SqlCommand command, Location location)
         {
             command.AddParameter("@Id", SqlDbType.Int, location.Id);
-            command.AddParameter("@Longitude", SqlDbType.Decimal, location.Latitude);
+            command.AddParameter("@Longitude", SqlDbType.Decimal, location.Longitude);
             command.AddParameter("@Latitude", SqlDbType.Decimal, location.Latitude);
             command.AddParameter("@Active", SqlDbType.Bit, location.Active);
         }
 
-        public static List<Location> GetAllLocations(ActiveStatusEnum active)
+        public static List<Location> GetLocations(ActiveStatusEnum active)
         {
             try
             {
@@ -124,6 +124,10 @@ namespace LocationMicroService_SocialWall.DataAccess
                         {
                             retVal = ReadRow(reader);
                         }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                 }
@@ -188,14 +192,17 @@ namespace LocationMicroService_SocialWall.DataAccess
                     command.CommandText = String.Format(@"
                         UPDATE [dbo].[Location] 
                         SET 
-                        [Longitude] = @Longitude  
-                        AND
-                        [Latitude] = @Latitude
-                        WHERE [id] = @Id;
+                        [Longitude] = @Longitude,
+                        [Latitude] = @Latitude,
+                        [Active] = @Active
+                        WHERE [Id] = @Id
                     ");
+
+                    //FillData(command, location);
                     command.AddParameter("@Id", SqlDbType.Int, id);
                     command.AddParameter("@Longitude", SqlDbType.Decimal, location.Longitude);
                     command.AddParameter("@Latitude", SqlDbType.Decimal, location.Latitude);
+                    command.AddParameter("@Active", SqlDbType.Bit, location.Active);
                     connenction.Open();
                     command.ExecuteNonQuery();
                 }
